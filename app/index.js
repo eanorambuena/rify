@@ -64,7 +64,7 @@ const app = ({ el }) => {
           . ¡Mucha suerte! 🍀
         </p>
         <p class="relative text-sm opacity-[90%]">
-          Se rifan plantas 🪴 Las imágenes son referenciales, se entrega en macetero estándar
+          Se rifan plantas 🪴 Las imágenes son referenciales, se entrega en macetero estándar terracota de vivero
           <span class="absolute -top-{0.1rem} inline-block">* </span>
         </p>
       </section>
