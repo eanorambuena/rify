@@ -24,8 +24,8 @@ const app = ({ el }) => {
         `}
         <p class="text-md">
           Si quieres participar, escríbeme a mi
-          <Social name="WhatsApp" />
-          ${ config.telegram && html` o <Social name="Telegram" />` }. ¡Mucha suerte! 🍀
+          <Social name="WhatsApp" />${socials.telegram ? 'o' : ''}<Social name="Telegram" />.
+          ¡Mucha suerte! 🍀
         </p>
         ${ config.legal && html`
           <p class="relative text-sm opacity-[90%]">
