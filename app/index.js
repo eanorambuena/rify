@@ -19,7 +19,7 @@ const app = ({ el }) => {
         <p>${config.description}</p>
         ${config.details && html`
           <p class="text-md font-semibold">
-            ${config.details({ price: getPrice(), numberOfNumbers })}
+            ${config.details({ price: getPrice(), numberOfNumbers, numberOfParticipants })}
           </p>
         `}
         <p class="text-md">
