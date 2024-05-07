@@ -20,7 +20,7 @@ export default {
   numberOfPrizesPerUnlock: 10,
   accentColor: 'green',
   socials: {
-    whatsapp: 56966307170,
+    whatsapp: 56992548707,
     telegram: 'cochichua'
   },
   prizes: [
