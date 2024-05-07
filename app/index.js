@@ -10,7 +10,7 @@ const app = ({ el }) => {
   const { socials, prizes, numberOfNumbers, numberOfPrizesPerUnlock, ticketPrice, currency, numbersBuyed } =  config
 
   const numberOfParticipants = numbersBuyed.length
-  const prizesUnlocked = Math.floor(numberOfParticipants / numberOfPrizesPerUnlock)
+  const prizesUnlocked = 1 + Math.floor(numberOfParticipants / numberOfPrizesPerUnlock)
 
   return html`
     <main class="flex flex-col items-center p-6 w-[90%] md:w-[60%] gap-6">
@@ -42,7 +42,7 @@ const app = ({ el }) => {
               title="${title}"
               src=${src}
               locked=${index <= prizesUnlocked}
-              lockedtext="Para desbloquear este premio faltan ${index * numberOfPrizesPerUnlock - numberOfParticipants} participantes"
+              lockedtext="Para desbloquear este premio faltan ${Math.max(index * numberOfPrizesPerUnlock - numberOfParticipants, 0)} participantes"
             />
           `)).replace(/,/g, '')}
         </section>
