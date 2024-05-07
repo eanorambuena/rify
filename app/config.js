@@ -69,5 +69,5 @@ export default {
       src: 'https://thefunkycactus.co.uk/wp-content/uploads/2023/03/il_fullxfull.4733374599_jyla-scaled.jpg'
     }
   ],
-  numbersBuyed: []
+  numbersBuyed: [937]
 }
