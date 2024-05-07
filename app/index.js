@@ -51,9 +51,15 @@ const app = ({ el }) => {
     }
   ]
 
-  const numberOfParticipants = 0
+  const numbersBuyed = [7, 69, 420, 666, 777, 888, 999, 1000]
+
+  const numberOfParticipants = numbersBuyed.length
+  const numberOfNumbers = 1000
   const numberOfPrizesPerUnlock = 10
   const prizesUnlocked = Math.floor(numberOfParticipants / numberOfPrizesPerUnlock)
+
+  const message = (number) => 
+    `https://wa.me/56966307170?text=Estoy%20interesado%20en%20la%20rifa%20del%20número%20${number}`
 
   return html`
     <main class="flex flex-col items-center p-6 w-[90%] md:w-[60%] gap-6">
@@ -62,7 +68,8 @@ const app = ({ el }) => {
         <p>¿No sabes qué regalarle a la mujer más importante de tu vida? Demuéstrale tu amor y gratitud regalándole vida este mes de la madre. Sorpréndela con un ser vivo que necesite de sus cuidados y que le brinde alegría y tranquilidad. En nuestro sitio web encontrarás opciones increíbles para regalarle a esa mujer tan especial. ¡Haz de este regalo una experiencia inolvidable para ambos y regálale vida hoy mismo!</p>
         <p class="text-md font-semibold">
           Para financiar mi intercambio de estudios en el extranjero, estoy rifando plantas. Cada número tiene un valor de $1.000 CLP.
-          Cada 10 número se desbloquea una planta más. ¡Participa y llévate una planta a casa! 🌿
+          Cada 10 número se desbloquea una planta más. Quedan ${numberOfNumbers} números disponibles.
+          ¡Participa y llévate una planta a casa! 🌿
         </p>
         <p class="text-md">
           Si quieres participar, escríbeme a mi
@@ -89,6 +96,16 @@ const app = ({ el }) => {
           `)).replace(/,/g, '')}
         </section>
       </section>
+      <section class="flex flex-col items-center p-4 gap-6">
+        <h2 class="text-2xl font-bold">🎟️Números Disponibles🎟️</h2>
+        <p>Quedan ${numberOfNumbers} números disponibles</p>
+        <article class="grid grid-cols-5 md:grid-cols-10 gap-4">
+          ${String(Array.from({ length: numberOfNumbers }, (_, index) => index + 1).map(number => html`
+            <a class="bg-green-500 text-white font-bold rounded-lg p-2 text-center ${numbersBuyed.includes(number) ? 'bg-red-500 cursor-not-allowed disabled' : 'hover:bg-green-600'}" aria-label="Comprar número ${number}" href="${numbersBuyed.includes(number) ? '#' : message(number)}">
+              ${number}
+            </a>
+          `)).replace(/,/g, '')}
+        </article>
     </main>
   `
 }
