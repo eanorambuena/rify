@@ -53,7 +53,7 @@ const app = ({ el }) => {
       </section>
       <section class="flex flex-col items-center p-4 gap-6">
         <h2 class="text-2xl font-bold">🎟️Números Disponibles🎟️</h2>
-        <p>Quedan ${numberOfNumbers} números disponibles</p>
+        <p>Quedan ${numberOfNumbers - numberOfParticipants} números disponibles</p>
         <article class="grid grid-cols-5 md:grid-cols-10 gap-4">
           ${String(Array.from({ length: numberOfNumbers }, (_, index) => index + 1).map(number => html`
             <a class="bg-green-500 text-white font-bold rounded-lg p-2 text-center ${numbersBuyed.includes(number) ? 'bg-red-500 cursor-not-allowed disabled' : 'hover:bg-green-600'}" aria-label="Comprar número ${number}" href="${numbersBuyed.includes(number) ? '#' : socialNetworksMessage.whatsapp(socials.whatsapp, number)}">
