@@ -49,15 +49,23 @@ const app = ({ el }) => {
       title: 'Árbol de la Abundancia o Jade',
       src: 'https://thefunkycactus.co.uk/wp-content/uploads/2023/03/il_fullxfull.4733374599_jyla-scaled.jpg'
     }
-   ]
+  ]
+
+  const numberOfParticipants = 0
+  const numberOfPrizesPerUnlock = 10
+  const prizesUnlocked = Math.floor(numberOfParticipants / numberOfPrizesPerUnlock)
 
   return html`
-    <main class="flex flex-col items-center p-6 w-[90%] md:w-1/2 gap-6">
+    <main class="flex flex-col items-center p-6 w-[90%] md:w-[60%] gap-6">
       <section class="flex flex-col items-center p-4 gap-6">
-        <h1 class="text-3xl text-bold">💚EcoRifa🍀</h1>
-        <p>¿No sabes qué regalarle a la mujer más importante de tu vida? Demuéstrale tu amor y gratitud regalándole vida. Sorpréndela con un ser vivo que necesite de sus cuidados y que le brinde alegría y tranquilidad. En nuestro sitio web encontrarás opciones increíbles para regalarle a esa mujer tan especial. ¡Haz de este regalo una experiencia inolvidable para ambos y regálale vida hoy mismo!</p>
+        <h1 class="text-3xl font-bold">💚EcoRifa🍀</h1>
+        <p>¿No sabes qué regalarle a la mujer más importante de tu vida? Demuéstrale tu amor y gratitud regalándole vida este mes de la madre. Sorpréndela con un ser vivo que necesite de sus cuidados y que le brinde alegría y tranquilidad. En nuestro sitio web encontrarás opciones increíbles para regalarle a esa mujer tan especial. ¡Haz de este regalo una experiencia inolvidable para ambos y regálale vida hoy mismo!</p>
+        <p class="text-md font-semibold">
+          Para financiar mi intercambio de estudios en el extranjero, estoy rifando plantas. Cada número tiene un valor de $1.000 CLP.
+          Cada 10 número se desbloquea una planta más. ¡Participa y llévate una planta a casa! 🌿
+        </p>
         <p class="text-md">
-          Para financiar mi intercambio de estudios en el extranjero, estoy rifando plantas. Cada número tiene un valor de $1.000 CLP. Si quieres participar, escríbeme a mi
+          Si quieres participar, escríbeme a mi
           <a href="https://wa.me/56966307170?text=Estoy%20interesado%20en%20la%20rifa" target="_blank" class="text-green-500" aria-label="Chatea en WhatsApp">WhatsApp</a>
           o
           <a href="https://t.me/cochichua" target="_blank" class="text-green-500" aria-label="Chatea en Telegram">Telegram</a>
@@ -69,9 +77,16 @@ const app = ({ el }) => {
         </p>
       </section>
       <section class="flex flex-col items-center p-4 gap-6">
-        <h2 class="text-2xl font-bold">🌿Plantas en Rifa🌿</h2>
+        <h2 class="text-2xl font-bold">🌿Plantas a Sortear🌿</h2>
         <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          ${String(prizes.map(({ title, src }) => html`<Card title="${title}" src=${src} />`)).replace(/,/g, '')}
+          ${String(prizes.map(({ title, src }, index) => html`
+            <Card
+              title="${title}"
+              src=${src}
+              locked=${index <= prizesUnlocked}
+              lockedtext="Para desbloquear este premio faltan ${index * numberOfPrizesPerUnlock - numberOfParticipants} participantes"
+            />
+          `)).replace(/,/g, '')}
         </section>
       </section>
     </main>
