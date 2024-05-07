@@ -6,9 +6,9 @@ export default {
     En nuestro sitio web encontrarás opciones increíbles para regalarle a esa mujer tan especial.
     ¡Haz de este regalo una experiencia inolvidable para ambos y regálale vida hoy mismo!
   `,
-  details: ({ price, numberOfNumbers }) => `
+  details: ({ price, numberOfNumbers, numberOfParticipants }) => `
     Para financiar mi intercambio de estudios en el extranjero, estoy rifando plantas. Cada número tiene un valor de ${price}.
-    Cada 10 números se desbloquea una planta más. Quedan ${numberOfNumbers} números disponibles.
+    Cada 10 números se desbloquea una planta más. Quedan ${numberOfNumbers - numberOfParticipants} números disponibles.
     ¡Participa y llévate una planta a casa! 🌿
   `,
   legal: 'Se rifan plantas 🪴 Las imágenes son referenciales, se entrega en macetero estándar terracota de vivero',
