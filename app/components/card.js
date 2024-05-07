@@ -12,15 +12,16 @@ const lockIcon = ({ size, stroke = "currentColor" }) => html`
 
 const card = ({ el, props }) => {
   const { title, src, locked, lockedtext } = props()
+  const isLocked = locked() === 'true'
   
   el.className = 'bg-white text-black p-3 rounded-lg w-fit-content border border-gray-200 grid grid-rows-subgrid gap-4 row-span-2 relative'
 
   return html`
-    <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-30 rounded-lg flex flex-column justify-center items-center ${locked() ? '' : 'hidden'}">
+    <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-30 rounded-lg flex flex-column justify-center items-center ${isLocked ? '' : 'hidden'}">
       ${lockIcon({ size: 50, stroke: '#ddd' })}
     </div>
     <h3 class="text-xl font-bold flex h-full items-center justify-center">${title()}</h3>
-    <img src="${src()}" alt="${title() + locked() ?? lockedtext()}" class="w-full rounded-lg aspect-[3/4] object-cover" />
+    <img src="${src()}" alt="${title() + isLocked ?? lockedtext()}" class="w-full rounded-lg aspect-[3/4] object-cover" />
   `
 }
 

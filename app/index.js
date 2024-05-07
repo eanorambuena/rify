@@ -36,12 +36,16 @@ const app = ({ el }) => {
       </section>
       <section class="flex flex-col items-center p-4 gap-6">
         <h2 class="text-2xl font-bold">${config.subheading}</h2>
+        <div class="flex flex-col items-center gap-2">
+          <p class="text-sm">Faltan ${Math.max(numberOfPrizesPerUnlock * prizesUnlocked - numberOfParticipants, 0)} participantes para desbloquear el siguiente premio</p>
+          <progress class="w-full" max="${numberOfPrizesPerUnlock}" value="${numberOfParticipants % numberOfPrizesPerUnlock}"></progress>
+        </div>
         <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           ${String(prizes.map(({ title, src }, index) => html`
             <Card
               title="${title}"
               src=${src}
-              locked=${index <= prizesUnlocked}
+              locked=${index >= prizesUnlocked}
               lockedtext="Para desbloquear este premio faltan ${Math.max(index * numberOfPrizesPerUnlock - numberOfParticipants, 0)} participantes"
             />
           `)).replace(/,/g, '')}
