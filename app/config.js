@@ -7,7 +7,7 @@ export default {
     ¡Haz de este regalo una experiencia inolvidable para ambos y regálale vida hoy mismo!
   `,
   details: ({ price, numberOfNumbers, numberOfParticipants }) => `
-    Para financiar mi intercambio de estudios en el extranjero ✈️, estoy rifando plantas. Cada número tiene un valor de ${price}.
+    Para financiar mi intercambio de estudios en el Europa ✈️, estoy rifando plantas. Cada número tiene un valor de ${price}.
     Cada 10 números se desbloquea una planta más. Quedan ${numberOfNumbers - numberOfParticipants} números disponibles.
     ¡Participa y llévate una planta a casa! 🌿
   `,
