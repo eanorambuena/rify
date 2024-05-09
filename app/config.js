@@ -3,11 +3,11 @@ export default {
   description: `
     ¿No sabes qué regalarle a la mujer más importante de tu vida? Demuéstrale tu amor y gratitud regalándole vida este mes de la madre.
     Sorpréndela con un ser vivo que necesite de sus cuidados y que le brinde alegría y tranquilidad.
-    En nuestro sitio web encontrarás opciones increíbles para regalarle a esa mujer tan especial.
+    Aquí encontrarás opciones increíbles para regalarle a esa mujer tan especial.
     ¡Haz de este regalo una experiencia inolvidable para ambos y regálale vida hoy mismo!
   `,
   details: ({ price, numberOfNumbers, numberOfParticipants }) => `
-    Para financiar mi intercambio de estudios en el extranjero, estoy rifando plantas. Cada número tiene un valor de ${price}.
+    Para financiar mi intercambio de estudios en el extranjero ✈️, estoy rifando plantas. Cada número tiene un valor de ${price}.
     Cada 10 números se desbloquea una planta más. Quedan ${numberOfNumbers - numberOfParticipants} números disponibles.
     ¡Participa y llévate una planta a casa! 🌿
   `,
@@ -30,7 +30,7 @@ export default {
     2, 24, // y
     32, 101, 109, 201, 209, 301, 309, 401, 409, 501, 509, 601, 609, 701, 709, 801, 809, 901, 909, 912, // p
     1, 989, // ?
-    2, 3, 5, 17, 19, 29, 31, 37, 73, 127// k
+    2, 3, 5, 17, 19, 29, 31, 37, 73, 127 // k
   ],
   prizes: [
     {
