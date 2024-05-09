@@ -18,7 +18,7 @@ const app = ({ el }) => {
   const { socials, prizes, numberOfNumbers, numberOfPrizesPerUnlock, numbersBuyed } =  config
 
   const numberOfParticipants = numbersBuyed.length
-  const prizesUnlocked = 1 + Math.floor(numberOfParticipants / numberOfPrizesPerUnlock)
+  const prizesUnlocked = Math.floor(numberOfParticipants / numberOfPrizesPerUnlock)
   const whatsappNumber = String(socials.whatsapp).replace(/(\d{2})(\d{1})(\d{4})(\d{4})/, '+$1 $2 $3 $4')
 
   return html`
@@ -56,7 +56,7 @@ const app = ({ el }) => {
               title="${title}"
               src=${src}
               locked=${index >= prizesUnlocked}
-              lockedtext="Para desbloquear este premio faltan ${Math.max(index * numberOfPrizesPerUnlock - numberOfParticipants, 0)} participantes"
+              lockedtext="Para desbloquear este premio faltan participantes"
             />
           `)).replace(/,/g, '')}
         </section>
