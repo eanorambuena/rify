@@ -7,12 +7,12 @@ export default {
     ¡Haz de este regalo una experiencia inolvidable para ambos y regálale vida hoy mismo!
   `,
   details: ({ price, numberOfNumbers, numberOfParticipants }) => `
-    Para financiar mi intercambio de estudios en el Europa ✈️, estoy rifando plantas. Cada número tiene un valor de ${price}.
+    Para financiar mi intercambio de estudios en Europa ✈️, estoy rifando plantas. Cada número tiene un valor de ${price}.
     Cada 10 números se desbloquea una planta más. Quedan ${numberOfNumbers - numberOfParticipants} números disponibles.
     ¡Participa y llévate una planta a casa! 🌿
   `,
   legal: 'Se rifan plantas 🌿 Las imágenes son referenciales, se entrega en macetero estándar terracota de vivero',
-  subheading: '🌿Plantas a Sortear🌿',
+  subheading: '🌿 Plantas a Sortear 🌿',
   ticketPrice: 1000,
   currency: 'CLP',
   lang: 'es-CL',
@@ -26,12 +26,13 @@ export default {
   numbersBuyed: [
     937, // q
     11, 12, 13, // a
-    16, 23, 7, // c
+    16, 23, 7, // mc
     2, 24, // y
     32, 101, 109, 201, 209, 301, 309, 401, 409, 501, 509, 601, 609, 701, 709, 801, 809, 901, 909, 912, // p
     1, 989, // ?
     2, 3, 5, 17, 19, 29, 31, 37, 73, 127, // k
-    8, 9, 21, 22, 208, 308, 408, 508, 608, 708 // l
+    8, 9, 21, 22, 208, 308, 408, 508, 608, 708, // l
+    14 // c
   ],
   prizes: [
     {

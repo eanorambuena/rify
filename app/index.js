@@ -71,7 +71,7 @@ const app = ({ el }) => {
         </section>
       </section>
       <section class="flex flex-col items-center p-4 gap-6">
-        <h2 class="text-2xl font-bold">🎟️Números Disponibles🎟️</h2>
+        <h2 class="text-2xl font-bold">🎟️ Números Disponibles 🎟️</h2>
         <p>Quedan ${numberOfNumbers - numberOfParticipants} números disponibles</p>
         <article class="grid grid-cols-5 md:grid-cols-10 gap-4">
           ${String(Array.from({ length: numberOfNumbers }, (_, index) => index + 1).map(number => html`
