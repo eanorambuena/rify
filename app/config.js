@@ -69,10 +69,10 @@ export default {
     {
       title: 'Aloe Vera',
       src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf4P8dTz8X477G7qiDv7X9hCXl44rgwWaUwOtazsx7AA&s'
-    },
+    }/*,
     {
       title: 'Árbol de la Abundancia o Jade',
       src: 'https://thefunkycactus.co.uk/wp-content/uploads/2023/03/il_fullxfull.4733374599_jyla-scaled.jpg'
-    }
+    }*/
   ]
 }
