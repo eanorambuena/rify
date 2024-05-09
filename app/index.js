@@ -47,7 +47,7 @@ const app = ({ el }) => {
       <section class="flex flex-col items-center p-4 gap-6">
         <h2 class="text-2xl font-bold">${config.subheading}</h2>
         <div class="flex flex-col items-center gap-2">
-          <p class="text-sm">Faltan ${(numberOfPrizesPerUnlock * prizesUnlocked - numberOfParticipants) % numberOfPrizesPerUnlock} participantes para desbloquear el siguiente premio</p>
+          <p class="text-sm">Faltan ${numberOfPrizesPerUnlock - numberOfParticipants % numberOfPrizesPerUnlock} participantes para desbloquear el siguiente premio</p>
           <progress class="w-full" max="${numberOfPrizesPerUnlock}" value="${numberOfParticipants % numberOfPrizesPerUnlock}"></progress>
         </div>
         <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
