@@ -33,7 +33,7 @@ const app = ({ el }) => {
         `}
         <p class="text-md">
           Si quieres participar, escríbeme a mi
-          <Social name="WhatsApp" />${socials.telegram ? 'o' : ''}<Social name="Telegram" />.
+          <Social name="WhatsApp" />${socials.telegram ? 'o' : ''}<Social name="Telegram" />
           ¡Mucha suerte! 🍀
         </p>
         <p class="text-md">${whatsappIcon({ color: 'green' })} ${whatsappNumber}</p>
