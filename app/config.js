@@ -11,7 +11,7 @@ export default {
     Cada 10 números se desbloquea una planta más. Quedan ${numberOfNumbers - numberOfParticipants} números disponibles.
     ¡Participa y llévate una planta a casa! 🌿
   `,
-  legal: 'Se rifan plantas 🪴 Las imágenes son referenciales, se entrega en macetero estándar terracota de vivero',
+  legal: 'Se rifan plantas 🌿 Las imágenes son referenciales, se entrega en macetero estándar terracota de vivero',
   subheading: '🌿Plantas a Sortear🌿',
   ticketPrice: 1000,
   currency: 'CLP',

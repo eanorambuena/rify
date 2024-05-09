@@ -10,7 +10,16 @@ const whatsappIcon = ({ size = 24, color = 'currentColor' }) => html`
     <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
     <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
   </svg>
-`	
+`
+
+console.log(`🥚 EASTER EGG 2504 🥚
+  Felicidades Pirata 2495! Has encontrado este mensaje secreto 🏴‍☠️️
+  Si estás viendo este mensaje, es porque has abierto la consola del navegador.
+  Esta página está hecha con ❤️ por @eanorambuena usando Emmy.js (emmyjs.pages.dev)
+  una librería que permite crear interfaces web usando Web Components
+  Si no has comprado un número de la rifa, te invito a hacerlo, pues me ayudaría muchísimo para mi intercambio ✈
+  Si leíste todo esto, escríbeme con el código 2495-2504
+`)
 
 const app = ({ el }) => {
   el.className = 'flex flex-col justify-center items-center gap-6 text-center w-full h-fit mt-10'
