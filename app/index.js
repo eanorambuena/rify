@@ -4,13 +4,22 @@ import { socialNetworksMessage, getPrice } from './lib'
 import './components/card'
 import './components/social'
 
+const whatsappIcon = ({ size = 24, color = 'currentColor' }) => html`
+  <svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+    <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+  </svg>
+`	
+
 const app = ({ el }) => {
   el.className = 'flex flex-col justify-center items-center gap-6 text-center w-full h-fit mt-10'
 
-  const { socials, prizes, numberOfNumbers, numberOfPrizesPerUnlock, ticketPrice, currency, numbersBuyed } =  config
+  const { socials, prizes, numberOfNumbers, numberOfPrizesPerUnlock, numbersBuyed } =  config
 
   const numberOfParticipants = numbersBuyed.length
   const prizesUnlocked = 1 + Math.floor(numberOfParticipants / numberOfPrizesPerUnlock)
+  const whatsappNumber = String(socials.whatsapp).replace(/(\d{2})(\d{1})(\d{4})(\d{4})/, '+$1 $2 $3 $4')
 
   return html`
     <main class="flex flex-col items-center p-6 w-[90%] md:w-[60%] gap-6">
@@ -27,6 +36,7 @@ const app = ({ el }) => {
           <Social name="WhatsApp" />${socials.telegram ? 'o' : ''}<Social name="Telegram" />.
           ¡Mucha suerte! 🍀
         </p>
+        <p class="text-md">${whatsappIcon({ color: 'green' })} ${whatsappNumber}</p>
         ${ config.legal && html`
           <p class="relative text-sm opacity-[90%]">
             ${config.legal}
