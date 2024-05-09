@@ -23,6 +23,12 @@ export default {
     whatsapp: 56992548707,
     telegram: 'cochichua'
   },
+  numbersBuyed: [
+    937,
+    11, 12, 13,
+    16, 23, 7,
+    2, 24
+  ],
   prizes: [
     {
       title: 'Yucca Elephantipes',
@@ -68,6 +74,5 @@ export default {
       title: 'Árbol de la Abundancia o Jade',
       src: 'https://thefunkycactus.co.uk/wp-content/uploads/2023/03/il_fullxfull.4733374599_jyla-scaled.jpg'
     }
-  ],
-  numbersBuyed: [937, 11, 12, 13]
+  ]
 }
