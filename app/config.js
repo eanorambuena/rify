@@ -36,6 +36,7 @@ export default {
     207, // af u,
     91, 92, 93, 94, 95, // au u
     27, 47, // pc u
+    44, // s? u
     144, 196 // fo u
   ],
   prizes: [
