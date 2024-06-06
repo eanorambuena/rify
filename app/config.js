@@ -39,6 +39,7 @@ export default {
     44, // s? u
     144, 196, // fo u
     76, 77, 78, 79, 80, // br u
+    69, 70 // ah u
   ],
   prizes: [
     {
