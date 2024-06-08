@@ -1,5 +1,9 @@
 export default {
   title: '💚EcoRifa🍀',
+  winners: [
+    17, 12, 93, 196, 78, 47, 207,
+    809, 14, 7
+  ].sort((a, b) => a - b),
   description: `
     ¿No sabes qué regalarle a la mujer más importante de tu vida? Demuéstrale tu amor y gratitud regalándole vida este mes de la madre.
     Sorpréndela con un ser vivo que necesite de sus cuidados y que le brinde alegría y tranquilidad.

@@ -12,15 +12,6 @@ const whatsappIcon = ({ size = 24, color = 'currentColor' }) => html`
   </svg>
 `
 
-console.log(`🥚 EASTER EGG 2504 🥚
-  Felicidades Pirata 2495! Has encontrado este mensaje secreto 🏴‍☠️️
-  Si estás viendo este mensaje, es porque has abierto la consola del navegador.
-  Esta página está hecha con ❤️ por @eanorambuena usando Emmy.js (emmyjs.pages.dev)
-  una librería que permite crear interfaces web usando Web Components
-  Si no has comprado un número de la rifa, te invito a hacerlo, pues me ayudaría muchísimo para mi intercambio ✈
-  Si leíste todo esto, escríbeme con el código 2495-2504
-`)
-
 const app = ({ el }) => {
   el.className = 'flex flex-col justify-center items-center gap-6 text-center w-full h-fit mt-10'
 
@@ -53,6 +44,16 @@ const app = ({ el }) => {
           </p>
         `}
       </section>
+      ${ config.winners.length > 0 ? html`
+        <section class="flex flex-col items-center justify-center p-4 gap-6">
+          <h2 class="text-2xl font-bold">🏆 Ganadores<span class="hidden sm:inline"> y Ganadoras </span>🏆<h2>
+          <ul class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            ${String(config.winners.map(winner => html`
+              <li class="font-bold">${winner}</li>
+            `)).replace(/,/g, '')}
+          </ul>
+        </section>
+      ` : '' }
       <section class="flex flex-col items-center p-4 gap-6">
         <h2 class="text-2xl font-bold">${config.subheading}</h2>
         <div class="flex flex-col items-center gap-2">
@@ -85,3 +86,12 @@ const app = ({ el }) => {
 }
 
 load(app, 'App')
+
+console.log(`🥚 EASTER EGG 2504 🥚
+  Felicidades Pirata 2495! Has encontrado este mensaje secreto 🏴‍☠️️
+  Si estás viendo este mensaje, es porque has abierto la consola del navegador.
+  Esta página está hecha con ❤️ por @eanorambuena usando Emmy.js (emmyjs.pages.dev)
+  una librería que permite crear interfaces web usando Web Components
+  Si no has comprado un número de la rifa, te invito a hacerlo, pues me ayudaría muchísimo para mi intercambio ✈
+  Si leíste todo esto, escríbeme con el código 2495-2504
+`)
